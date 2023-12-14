@@ -1,0 +1,30 @@
+## Features Comming soon
+
+- [x] Auto Filter
+- [x] Manual Filter
+- [x] IMDB
+- [x] Admin Commands
+- [x] Broadcast
+- [x] Index
+- [x] IMDB search
+- [x] Inline Search
+- [x] Random pics
+- [x] ids and User info 
+- [x] Stats, Users, Chats
+- [x] Spelling Check Feature
+- [x] File Store
+- [x] 📂 PM & Channel 
+- [x] Auto delete
+- [x] 2GB+File Support
+- [x] song video download
+- [x] gfilter
+- [x] group broadcast
+- [x] telegraph
+- [x] games
+- [x] ping
+- [x] pdf convert to voice
+- [x] font
+- [x] translate
+- [x] PreDVD and CamRip Delete Mode
+- [x] Multiple File Deletion
+- [ ] 
