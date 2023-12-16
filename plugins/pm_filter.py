@@ -717,9 +717,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.unban_chat_member(query.message.chat.id, query.from_user.id)
         await query.answer("Can You Request Now!", show_alert=True)
         await query.message.delete()
-        await query.message.reply_to_message.delete()
-        
-        
+        await query.message.reply_to_message.delete()        
     elif query.data.startswith("checksub"):
         if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, query):
             await query.answer("𝑰 𝑳𝒊𝒌𝒆 𝒀𝒐𝒖𝒓 𝑺𝒎𝒂𝒓𝒕𝒏𝒆𝒔𝒔, 𝑩𝒖𝒕 𝑫𝒐𝒏'𝒕 𝑩𝒆 𝑶𝒗𝒆𝒓𝒔𝒎𝒂𝒓𝒕 😒", show_alert=True)
