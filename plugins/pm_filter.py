@@ -707,18 +707,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         await asyncio.sleep(600)
                         await Joel_tgx.delete()
                         await file_send.delete()
-                else:
-                    await query.answer(
-                        f"Hᴇʏ {query.from_user.first_name}, Tʜɪs Is Nᴏᴛ Yᴏᴜʀ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ. Rᴇǫᴜᴇsᴛ Yᴏᴜʀ's !",
-                        show_alert=True)
-                await query.answer('Cʜᴇᴄᴋ PM, I ʜᴀᴠᴇ sᴇɴᴛ ғɪʟᴇs ɪɴ PM', show_alert=True)
-        except UserIsBlocked:
-            await query.answer('𝐔𝐧𝐛𝐥𝐨𝐜𝐤 𝐭𝐡𝐞 𝐛𝐨𝐭 𝐦𝐚𝐡𝐧 !', show_alert=True)
-        except PeerIdInvalid:
-            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-        except Exception as e:
-            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-    elif  query.data.startswith("checksub"):
+                elif query.data.startswith("check_subscribed"):
+        userid = query.message.reply_to_message.from_user.id
+        if int(userid) not in [query.from_user.id, 0]:
+            return await query.answer("This Is Not For You!", show_alert=True)
+        if AUTH_CHANNEL and not await is_subscribed(client, query):
+            await query.answer("Please join first my Updates Channel", show_alert=True)
+            return
+        await client.unban_chat_member(query.message.chat.id, query.from_user.id)
+        await query.answer("Can You Request Now!", show_alert=True)
+        await query.message.delete()
+        await query.message.reply_to_message.delete()
+        
+        
+    elif query.data.startswith("checksub"):
         if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, query):
             await query.answer("𝑰 𝑳𝒊𝒌𝒆 𝒀𝒐𝒖𝒓 𝑺𝒎𝒂𝒓𝒕𝒏𝒆𝒔𝒔, 𝑩𝒖𝒕 𝑫𝒐𝒏'𝒕 𝑩𝒆 𝑶𝒗𝒆𝒓𝒔𝒎𝒂𝒓𝒕 😒", show_alert=True)
             return
