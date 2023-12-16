@@ -1,4 +1,4 @@
-## Features Comming soon
+## Features ADDED 
 
 - [x] Auto Filter
 - [x] Manual Filter
