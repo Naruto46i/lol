@@ -1021,7 +1021,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-     elif query.data == "horrid":
+    elif query.data == "horrid":
             buttons = [[
                 InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start")
                 ]]
