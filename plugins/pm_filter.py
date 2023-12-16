@@ -708,8 +708,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         await Joel_tgx.delete()
                         await file_send.delete()
                 elif query.data.startswith("check_subscribed"):
-        userid = query.message.reply_to_message.from_user.id
-        if int(userid) not in [query.from_user.id, 0]:
             return await query.answer("This Is Not For You!", show_alert=True)
         if AUTH_CHANNEL and not await is_subscribed(client, query):
             await query.answer("Please join first my Updates Channel", show_alert=True)
