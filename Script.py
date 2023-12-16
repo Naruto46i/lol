@@ -356,7 +356,7 @@ Elsa
 🗣️ Bᴏᴛ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ.
 📢 Bᴏᴛ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ.</b>
 """
-    HORRID_MAIN = """ GROUP MANAGING
+    HORRID_TXT = """<b>GROUP MANAGING
     REPORTS : /report or @admin
     Reports
 
@@ -384,5 +384,5 @@ Admin commands:
 - /removelastwarn: remove the last warn that a user has received
 - /getwarns: list the warns that a user has received
 - /resetwarns: reset all warns that a user has received
-- /setwarnmode : set the warn mode for the chat"""
+- /setwarnmode : set the warn mode for the chat<b>"""
 
