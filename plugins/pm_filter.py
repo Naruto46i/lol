@@ -857,9 +857,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                   ],[
                     InlineKeyboardButton('🍁 Oᴡɴᴇʀ', url='https://t.me/HORRIDduo'),
-                    InlineKeyboardButton('🌿 Sᴜᴘᴘᴏʀᴛ', callback_data="kd_cnl")
+                    InlineKeyboardButton('♻️Sᴜᴘᴘᴏʀᴛ♻️', callback_data="kd_cnl")
                   ],[
-                    InlineKeyboardButton('❗ Hᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('👣 Hᴇʟᴘ👣', callback_data='help'),
                     InlineKeyboardButton('🔰Aʙᴏᴜᴛ🔰', callback_data='about'),
                   ],[
                     InlineKeyboardButton('🛡️𝘌𝘟𝘛𝘙𝘈🛡️', callback_data='horrid')   
@@ -1027,7 +1027,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_text(
-                text=(script.HORRID_MAIN),
+                text=(script.HORRID_TXT),
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
         )             
