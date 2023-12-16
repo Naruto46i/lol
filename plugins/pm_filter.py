@@ -1,5 +1,4 @@
-# Kanged From @TroJanZheX
-# REDIRECT added https://github.com/Joelkb
+# horrid
 import asyncio
 import re
 import ast
@@ -863,7 +862,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('❗ Hᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('🔰Aʙᴏᴜᴛ🔰', callback_data='about'),
                   ],[
-                    InlineKeyboardButton('🛡️𝘌𝘟𝘛𝘙𝘈🛡️', callback_data='close_data')   
+                    InlineKeyboardButton('🛡️𝘌𝘟𝘛𝘙𝘈🛡️', callback_data='Horrid')   
                   ],[
                     InlineKeyboardButton('🔒 Cʟᴏsᴇ Mᴇɴᴜ', callback_data='close_data')
         ]]
@@ -1022,6 +1021,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+     elif query.data == "Horrid":
+            buttons = [[
+                InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start")
+                ]]
+            reply_markup = InlineKeyboardMarkup(buttons)
+            await query.message.edit_text(
+                text=(script.HORRID_MAIN),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+        )             
     elif query.data == "disc":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='about')
